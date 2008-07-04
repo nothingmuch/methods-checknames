@@ -7,7 +7,7 @@ use warnings;
 
 use XSLoader;
 
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 eval {
 	require XSLoader;
