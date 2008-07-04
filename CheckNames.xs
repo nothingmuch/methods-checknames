@@ -2,6 +2,7 @@
 #include "XSUB.h"
 #include "perl.h"
 #include "embed.h"
+#include "ppport.h"
 
 #ifndef SvPAD_TYPED
 #define SvPAD_TYPED(sv) \
