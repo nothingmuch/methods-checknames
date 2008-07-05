@@ -2,6 +2,7 @@
 #include "XSUB.h"
 #include "perl.h"
 #include "embed.h"
+#define NEED_sv_2pv_flags_GLOBAL
 #include "ppport.h"
 
 #ifndef SvPAD_TYPED
