@@ -1,3 +1,6 @@
+0.04
+	- Works all the way back to 5.005 now
+
 0.03
 	- D'oh... HvNAME_get is not in the perlapi, HvNAME is =P
 
