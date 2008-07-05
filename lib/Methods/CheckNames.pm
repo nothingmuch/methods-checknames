@@ -3,11 +3,10 @@
 package Methods::CheckNames;
 
 use strict;
-use warnings;
 
-use XSLoader;
+use vars qw($VERSION @ISA);
 
-our $VERSION = "0.03";
+$VERSION = "0.03";
 
 eval {
 	require XSLoader;
@@ -15,7 +14,7 @@ eval {
 	1;
 } or do {
 	require DynaLoader;
-	push our @ISA, 'DynaLoader';
+	push @ISA, 'DynaLoader';
 	__PACKAGE__->bootstrap($VERSION);
 };
 
