@@ -1,3 +1,6 @@
+0.03
+	- D'oh... HvNAME_get is not in the perlapi, HvNAME is =P
+
 0.02
 	- Support for Perl 5.8
 
