@@ -35,7 +35,7 @@ OP * mcn_ck_entersub(pTHX_ OP *o) {
 			if (!gv)
 				Perl_croak(aTHX_ "No such method \"%s\" " 
 						"for variable %s of type %s", 
-						name, SvPV_nolen(lexname), HvNAME_get(stash));
+						name, SvPV_nolen(lexname), HvNAME(stash));
 		}
 	}
 
