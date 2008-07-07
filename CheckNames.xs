@@ -1,7 +1,6 @@
 #include "EXTERN.h"
 #include "XSUB.h"
 #include "perl.h"
-#include "embed.h"
 #define NEED_sv_2pv_flags_GLOBAL
 #include "ppport.h"
 
