@@ -6,13 +6,13 @@ BEGIN {
 	unless ( eval "use Test::More 'no_plan'; 1" ) {
 		eval '
 		my $i = 0;
-		sub ok ($$) {
+		sub ok ($;$) {
 			$i++;
 			print "not " if not $_[0];
 			print "ok $_[1]\n";
 		}
 
-		sub is ($$$) {
+		sub is ($$;$) {
 			ok( $_[0] == $_[1], $_[2] );
 		}
 
