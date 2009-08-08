@@ -1,4 +1,6 @@
 .*
+CheckNames.*
+!CheckNames.xs
 !.gitignore
 Makefile*
 !Makefile.PL
