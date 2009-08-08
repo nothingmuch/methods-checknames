@@ -5,6 +5,7 @@
 ,v$
 \B\.svn\b
 \b_darcs\b
+\B\.git\b
 
 # Avoid Makemaker generated and utility files.
 \bMANIFEST\.bak
