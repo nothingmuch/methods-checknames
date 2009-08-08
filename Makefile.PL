@@ -11,6 +11,7 @@ configure_requires 'B::Hooks::OP::PPAddr';
 
 test_requires 'Test::More' => '0.88';
 
+requires 'namespace::clean';
 requires 'B::Hooks::OP::Check';
 requires 'B::Hooks::OP::PPAddr';
 
