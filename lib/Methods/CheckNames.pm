@@ -3,10 +3,13 @@
 package Methods::CheckNames;
 
 use strict;
+use warnings;
+use B::Hooks::OP::Check;
+use B::Hooks::OP::PPAddr;
+use B::Hooks::EndOfScope;
+use namespace::clean;
 
-use vars qw($VERSION @ISA);
-
-$VERSION = "0.04";
+our $VERSION = "0.04";
 
 eval {
 	require XSLoader;
@@ -14,9 +17,22 @@ eval {
 	1;
 } or do {
 	require DynaLoader;
-	push @ISA, 'DynaLoader';
+	push our @ISA, 'DynaLoader';
 	__PACKAGE__->bootstrap($VERSION);
 };
+
+sub import {
+    my ($class) = @_;
+    my $caller = caller;
+
+    my $hook = $class->setup;
+
+    on_scope_end {
+        $class->teardown($hook);
+    };
+
+    return;
+}
 
 __PACKAGE__
 
