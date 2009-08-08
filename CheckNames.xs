@@ -140,6 +140,8 @@ mangle_eval (pTHX_ OP *op, void *user_data)
 {
     userdata_t *ud = (userdata_t *)user_data;
 
+    /* there isn't a good way of attaching free hooks to ops yet, so we'll just
+     * leak this scalar */
     hook_op_ppaddr_around (op, before_eval, NULL, newSVsv (ud->class));
 
     return op;
