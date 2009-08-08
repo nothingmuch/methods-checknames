@@ -45,6 +45,8 @@ STATIC SV *get_inv_sv(pTHX_ OP *o2) {
 		SV **lexname = av_fetch(PL_comppad_name, o2->op_targ, TRUE);
 		return lexname ? *lexname : NULL;
 	}
+
+	return NULL;
 }
 
 STATIC HV *get_inv_stash(pTHX_ SV *lexname) {
@@ -65,7 +67,7 @@ OP * mcn_ck_entersub(pTHX_ OP *o) {
 
 	for (cvop = o2; cvop->op_sibling; cvop = cvop->op_sibling);
 
-	if ( name = get_method_op_name(aTHX_ cvop) ) {
+	if ((name = get_method_op_name(aTHX_ cvop))) {
 		SV *lexname = get_inv_sv(aTHX_ o2);
 
 		if ( lexname ) {
