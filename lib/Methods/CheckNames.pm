@@ -9,7 +9,7 @@ use B::Hooks::OP::PPAddr;
 use B::Hooks::EndOfScope;
 use namespace::clean;
 
-our $VERSION = "0.04";
+our $VERSION = "0.05_01";
 
 eval {
 	require XSLoader;
