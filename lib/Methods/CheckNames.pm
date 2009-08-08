@@ -68,11 +68,6 @@ Use the C<can> meta method instead of C<gv_fetchmethod>
 
 Make the checking pluggable
 
-=item *
-
-Checking should be lexically scoped. Not a huge issue for now, since C<my Foo
-$var> is not commonly used.
-
 =back
 
 =head1 VERSION CONTROL
