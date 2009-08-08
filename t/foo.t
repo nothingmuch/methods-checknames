@@ -23,6 +23,6 @@ my Foo $x = bless {}, "Foo";
 my $ran = 0;
 eval '$ran++; $x->bar()';
 like($@, qr/Can't locate object method/, 'normal runtime error message');
-is($ran, 1, "didn't run");
+is($ran, 1, "ran");
 
 done_testing;
