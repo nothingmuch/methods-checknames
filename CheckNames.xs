@@ -172,5 +172,6 @@ teardown (class, hook)
         ud = (userdata_t *)hook_op_check_remove (OP_ENTERSUB, hook);
         if (ud) {
             (void)hook_op_check_remove (OP_ENTEREVAL, ud->eval_hook);
+            SvREFCNT_dec (ud->class);
             Safefree (ud);
         }
