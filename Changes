@@ -1,3 +1,6 @@
+0.06
+    - Uploading 0.05_01 as a stable release, without modifications.
+
 0.05_01
     - Doesn't work back to 5.005 now.
     - Make the effects lexical.
